@@ -77,7 +77,7 @@ function draw(i) {
         ctx.lineTo(1000.0 / 54.0 * x[j][i + 1], 500 - (500.0 / 27.0 * y[j][i + 1]));
       }
 
-      ctx.stroke()
+      ctx.stroke();
       draw(i + 1);
     }, basetime * slider());
   }
