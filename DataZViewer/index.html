@@ -5,19 +5,22 @@
 </head>
 
 <body>
-<div class="container">
-<canvas id="canvas" width="1000" height="500"></canvas><br/>
-X-Values:
-<input id="xval" /> Y-Values:
-<input id="yval" /><br/>
-<div style="text-align: center; width: 300px">
-Speed:
-</div>
-<input type="range" min="1" max="1000" value="500" class="slider" id="speed" class="slider"> <br/>
-<button id="initiator" class="button">Click to draw.</button><br/>
-<button id="pause-button" class="button">Click to pause.</button><br/>
-<button id="play-button" class="button">Click to play.</button><br/>
-<script type="text/javascript" src="res/drawer.js"></script>
-</div>
+  <div class="container">
+    <canvas id="canvas" width="1000" height="500"></canvas>
+    <br/>
+    <input type="file" id="files" name="files[]" />
+    <div style="text-align: center; width: 300px">
+      Speed:
+    </div>
+    <input type="range" min="1" max="1000" value="500" class="slider" id="speed" class="slider">
+    <br/>
+    <button id="initiator" class="button">Click to draw.</button>
+    <br/>
+    <button id="pause-button" class="button">Click to pause.</button>
+    <br/>
+    <button id="play-button" class="button">Click to play.</button>
+    <br/>
+  </div>
+  <script type="text/javascript" src="res/drawer.js"></script>
 </body>
 </html>
