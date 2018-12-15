@@ -17,7 +17,7 @@ $( document ).ready(function() {
         cv.cvtColor(src, src, cv.COLOR_RGB2GRAY, 0);
         // Courier New has an aspact ratio of ~0.43
         // This makes an approximation of 14px x 3px pretty good for one char
-        cv.copyMakeBorder(src, src, 0, (7 - (src.rows % 7)), 0, (3 - (src.cols % 3)), cv.BORDER_CONSTANT);
+        cv.copyMakeBorder(src, src, 0, (7 - (src.rows % 7)), 0, (3 - (src.cols % 3)), cv.BORDER_REFLECT);
 
         cv.Canny(src, dst, 50, 100, 3, false);
 
