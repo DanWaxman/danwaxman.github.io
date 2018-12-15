@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     // Load OpenCV Library
-    $.getScript( '/res/opencv.js', function( data, textStatus, jqxhr ) {
+    $.getScript( 'APictureIs1000Words/res/opencv.js', function( data, textStatus, jqxhr ) {
         console.log( 'OpenCV.js load was performed | Status: ' + textStatus + ' ' + jqxhr.status);
     });
 
