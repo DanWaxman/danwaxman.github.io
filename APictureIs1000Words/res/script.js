@@ -33,8 +33,6 @@ $( document ).ready(function() {
         }
         cv.imshow('canvasOutput', dst);
 
-        console.log(charStr);
-
         $('#charoutput').html(charStr);
 
 
