@@ -86,7 +86,7 @@ function calculateLines(img) {
 
         mVal = Math.max(colSum, rowSum, mDiagSum, sDiagSum);
         if (mVal == 0) {
-            return '.';
+            return ' ';
         }
         if (colSum == mVal) {
             return '|';
