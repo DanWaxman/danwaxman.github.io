@@ -43,56 +43,18 @@ $( document ).ready(function() {
 var openCVLoaded = false;
 
 function calculateLines(img) {
-    // Incredilby inefficient while testing...
-    // Fix that later.
-
-    // One current problem is that when everything is so zoomed in, a diagonal
-    // looks just like a straight vertial line. I need to pad and then convolve around 
-    // a larger context to fix this, but I also need sleep so...
+    let sum = 0;
     if (openCVLoaded) {
-        let col  = cv.matFromArray(3, 3, cv.CV_8U, [1,0,-1,2,0,-2,1,0,-1]);
-        let row = cv.matFromArray(3, 3, cv.CV_8U, [1,2,1,0,0,0,-1,-2,-1]);
-        let mDiag = cv.matFromArray(3,3, cv.CV_8U, [0,1,2,-1,0,1,-2,-1,0]);
-        let sDiag = cv.matFromArray(3, 3, cv.CV_8U, [-2,-1,0,-1,0,1,0,1,2]);
-
-
-        let tmpCol = cv.Mat.zeros(1, 5, cv.CV_8U);
-        let tmpRow = cv.Mat.zeros(1, 5, cv.CV_8U);
-        let tmpmDiag = cv.Mat.zeros(1, 5, cv.CV_8U);
-        let tmpsDiag = cv.Mat.zeros(1, 5, cv.CV_8U);
-
-
-        let colConv = cv.filter2D(img, tmpCol, cv.CV_8U, col);
-        let rowConv = cv.filter2D(img, tmpRow, cv.CV_8U, row);
-        let mDiagConv = cv.filter2D(img, tmpmDiag, cv.CV_8U, mDiag);
-        let sDiagConv = cv.filter2D(img, tmpsDiag, cv.CV_8U, sDiag);
-
-
-        let colSum = 0;
-        let rowSum = 0;
-        let mDiagSum = 0;
-        let sDiagSum = 0;
-
-        for (var i = 0; i < 1 * 5; i++) {
-            colSum += Math.abs(tmpCol.data[i]);
-            rowSum += Math.abs(tmpRow.data[i]);
-            mDiagSum += Math.abs(tmpmDiag.data[i]);
-            sDiagSum += Math.abs(tmpsDiag.data[i]);
+        for (var i = 0; i < img.rows; i++) {
+            for (var j = 0; j < img.cols; j++) {
+                sum += img.data[i * img.cols + j];
+            }
         }
 
-        tmpCol.delete(); tmpRow.delete(); tmpmDiag.delete(); tmpsDiag.delete();
-
-        mVal = Math.max(colSum, rowSum, mDiagSum, sDiagSum);
-        if (mVal == 0) {
-            return ' ';
-        } else if (colSum == mVal) {
+        if (sum > 510) {
             return '|';
-        } else if (rowSum == mVal) {
-            return '-';
-        } else if (mDiagSum == mVal) {
-            return '\\';
-        } else {
-            return '/';
+        } else if (sum > 255) {
+            return '.';
         }
     }
     return ' ';
