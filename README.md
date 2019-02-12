@@ -1,7 +1,6 @@
-# danwaxman.me
+# danwaxman.github.io
 Some projects I've worked on/am working on.
 
-[APictureIs1000Words](APictureIs1000Words) is a WIP image-to-ASCII converter using OpenCV.js.
-[DataZViewer](DataZViewer) is a viewer for data by DataZ, an application of RFID technology to FRC Robotics by Zebra Technologies.
+[APictureIs1000Words](APictureIs1000Words) is an image-to-ASCII converter using OpenCV.js. It works by first running a Canny Edge Detection algorithm on an image, then seeing if a Probabilistic Hough Transform recognizes any lines. It's a bit slow on mobile devices thanks to the overkill that is OpenCV for this project, but works okay in browsers with WebAssembly support on a desktop.
+[DataZViewer](DataZViewer) is a viewer for data by DataZ, a cool application of RFID technology to FRC Robotics by Zebra Technologies. The viewer is a bit outdated at this point, as the technology never really seemed to take off, but is a neat display of what could have been I suppose.
 
-I swear I'll get around to making these things look pretty eventually, but eventually is not today.
