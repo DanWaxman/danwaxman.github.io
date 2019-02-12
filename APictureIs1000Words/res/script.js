@@ -45,17 +45,13 @@ var openCVLoaded = false;
 function calculateLines(img) {
     let sum = 0;
     if (openCVLoaded) {
-        for (var i = 0; i < img.rows; i++) {
-            for (var j = 0; j < img.cols; j++) {
-                sum += img.data[i * img.cols + j];
-            }
+        let lines = new cv.Mat();
+
+        cv.HoughLinesP(img, lines, 1, Math.PI / 180, 2, 0, 0);
+        if (lines.rows) {
+            return '|';
         }
 
-        if (sum > 510) {
-            return '|';
-        } else if (sum > 255) {
-            return '.';
-        }
     }
     return ' ';
 }
