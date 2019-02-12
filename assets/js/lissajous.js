@@ -5,12 +5,24 @@ var omega_2 = 20;
 var phase = Math.PI / 2;
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
+var reqId = null;
 
 function init() {
+    document.getElementById('play-button').onclick = function() {
+        if (reqId) {
+            cancelAnimationFrame(reqId);
+        }
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        startAnimation();
+    }
+}
+
+function startAnimation() {
     let t = new Date() / 1000;
     prevx = getX(omega_1, t, phase);
     prevy = getY(omega_2, t, phase);
-    requestAnimationFrame(draw);
+    reqId = requestAnimationFrame(draw);
 }
 
 function draw() {
@@ -25,7 +37,7 @@ function draw() {
     ctx.lineTo(x, y);
     ctx.stroke();
     prevt = t;
-    requestAnimationFrame(draw);
+    reqId = requestAnimationFrame(draw);
     prevx = x;
     prevy = y;
 }
