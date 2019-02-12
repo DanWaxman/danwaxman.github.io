@@ -12,6 +12,10 @@ function init() {
         if (reqId) {
             cancelAnimationFrame(reqId);
         }
+
+        omega_1 = parseFloat(document.getElementById("omega_1").value);
+        omega_2 = parseFloat(document.getElementById("omega_2").value);
+        phase = parseFloat(document.getElementById("phase").value) * Math.PI;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         startAnimation();
