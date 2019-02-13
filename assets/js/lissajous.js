@@ -6,6 +6,7 @@ var phase = Math.PI / 2;
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var reqId = null;
+var speed = 1;
 
 function init() {
     document.getElementById('play-button').onclick = function() {
@@ -13,9 +14,10 @@ function init() {
             cancelAnimationFrame(reqId);
         }
 
-        omega_1 = parseFloat(document.getElementById("omega_1").value);
-        omega_2 = parseFloat(document.getElementById("omega_2").value);
-        phase = parseFloat(document.getElementById("phase").value) * Math.PI;
+        omega_1 = parseFloat(document.getElementById('omega_1').value);
+        omega_2 = parseFloat(document.getElementById('omega_2').value);
+        phase = parseFloat(document.getElementById('phase').value) * Math.PI;
+        speed = parseFloat(document.getElementById('speed').value)
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         startAnimation();
@@ -47,11 +49,11 @@ function draw() {
 }
 
 function getX(omega, t, phase) {
-    return canvas.width / 2 + 100 * Math.sin(omega * t + phase);
+    return canvas.width / 2 + 100 * Math.sin(omega * t * speed + phase);
 }
 
 function getY(omega, t) {
-    return canvas.height / 2 + 100 * Math.sin(omega * t);
+    return canvas.height / 2 + 100 * Math.sin(omega * t * speed);
 }
 
 init();
