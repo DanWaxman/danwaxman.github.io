@@ -26,7 +26,7 @@ function init() {
 }
 
 function startAnimation() {
-    let t = new Date() / 1000;
+    let t = performance.now() / 1000;
     prevx = getX(omega_1, t, phase);
     prevy = getY(omega_2, t);
     prevt = t;
@@ -39,7 +39,7 @@ function draw() {
     ctx.strokeStyle = 'green';
     ctx.moveTo(prevx, prevy);
 
-    let t = new Date() / 1000;
+    let t = performance.now() / 1000;
     let nsteps = Math.max(omega_1, omega_2) * speed;
     let x = 0;
     let y = 0;
