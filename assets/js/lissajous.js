@@ -1,5 +1,6 @@
 var prevx = 0;
 var prevy = 0;
+var prevt = 0;
 var omega_1 = 1;
 var omega_2 = 20;
 var phase = Math.PI / 2;
@@ -28,6 +29,7 @@ function startAnimation() {
     let t = new Date() / 1000;
     prevx = getX(omega_1, t, phase);
     prevy = getY(omega_2, t);
+    prevt = t;
     reqId = requestAnimationFrame(draw);
 }
 
@@ -38,12 +40,18 @@ function draw() {
     ctx.moveTo(prevx, prevy);
 
     let t = new Date() / 1000;
-    let x = getX(omega_1, t, phase);
-    let y = getY(omega_2, t);
-    ctx.lineTo(x, y);
-    ctx.stroke();
-    prevt = t;
+    let nsteps = Math.max(omega_1, omega_2) * speed;
+    let x = 0;
+    let y = 0;
+    for (var i = 1; i <= nsteps; i++) {
+        let ct = prevt + (t - prevt) * (i / nsteps);
+        x = getX(omega_1, ct, phase);
+        y = getY(omega_2, ct);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+    }
     reqId = requestAnimationFrame(draw);
+    prevt = t;
     prevx = x;
     prevy = y;
 }
