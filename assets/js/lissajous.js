@@ -11,6 +11,15 @@ var reqId = null;
 var speed = 1;
 
 function init() {
+    document.getElementById('pause-button').onclick = function() {
+        if (reqId) {
+            cancelAnimationFrame(reqId);
+            reqId = null;
+        } else {
+            requestAnimationFrame(draw);
+        }
+    }
+
     document.getElementById('play-button').onclick = function() {
         if (reqId) {
             cancelAnimationFrame(reqId);
