@@ -25,7 +25,7 @@ function init() {
 function startAnimation() {
     let t = new Date() / 1000;
     prevx = getX(omega_1, t, phase);
-    prevy = getY(omega_2, t, phase);
+    prevy = getY(omega_2, t);
     reqId = requestAnimationFrame(draw);
 }
 
