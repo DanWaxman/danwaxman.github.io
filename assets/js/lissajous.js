@@ -45,7 +45,7 @@ function startAnimation() {
 
 function draw() {
     ctx.beginPath();
-    ctx.lineWidth = '2';
+    ctx.lineWidth = '1';
     ctx.strokeStyle = 'green';
     ctx.moveTo(prevx, prevy);
 
