@@ -210,6 +210,7 @@ function draw() {
                 filt_reg += " ";
             }
         }
+        var theta = Math.atan2(XOR_X - (START_X + BOX_WIDTH / 2), 100);
         rdx += 1;
 
         if (rdx > 100) {
@@ -217,7 +218,8 @@ function draw() {
             iv_val = xor(filt_reg);
             STAGE = 0;
         }
-        drawRegisters(filt_reg, (rdx / 100) * BOX_WIDTH * (N_OF_REG - 1) / 2, rdx, BOX_WIDTH / (1 + rdx / 25));
+        var dx = (rdx / 100) * (XOR_X - (BOX_WIDTH / 2 + START_X));
+        drawRegisters(filt_reg, dx, rdx, (BOX_WIDTH * N_OF_REG - 2 * dx) / N_OF_REG );//, BOX_WIDTH / (1 + rdx / 25));
         // TODO: MAKE THIS NOT SHIT
         // AND ALSO FOLLOW LINES
     }
