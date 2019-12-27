@@ -2,8 +2,27 @@
 title: LFSR
 layout: default
 ---
+An Linear-Feedback Shift Register (LFSR) is a shift register where the input is a linear function of its current state. If we use an XOR operation as its function, we create a pseudo-random number generator (PRNG) with some nice mathematical properties. In addition, such a shift register is extremely easy to implement in hardware, so this device finds common usage. However, due to its dependence on current state, as well as its cyclic nature, LFSRs are not considered cryptographically secure. <br/>
+<br/>
+
+We create an LFSR as follows: we take a number of registers and load them with an initial state. We then configure our LFSR by deciding which registers will be XORd to produce the input bit --- these are called the taps. Operation then proceeds as follows: <br/> 
+- Create the input bit by XORing registers with true crib values. If we think of 1 as true and 0 as false, and remember that XOR is addition modulo 2 (aka over Z_2, a field!), we can recover our notion of this function being linear. We could even write the matrix explicitly, but I'm too tired for this right now. <br/>
+- Take the input bit, and shift each register to the right; the right-most bit "falls out" and becomes our output. Each of the other bits fall in place. <br/>
+- Repeat. <br/>
+<br/>
+
+We can now note a few simple theorems about our LFSR system. <br/>
+<br/>
+Theorem: An LFSR with values of zero (the "all-zeros" state) will stay in the all-zeros state.<br/>
+Proof: Using our language of linear algebra, we note that the all-zeros state is the zero vector in our vector space Z_2^n. So any matrix times the zero vector is zero. <br/>
+<br/>
+Theorem: An LFSR must cycle. In particular, the maximum cycle of an n-register LFSR is 2^n - 1.<br/>
+Proof: There are exactly 2^n states that n registers can hold. The all-zeros state cannot be one of these in a cycle, so the maximum cycle must be 2^n - 1. Existence of such a cycle is left as an exercise to the reader.<br/>
+<br/>
+Below is a playable demo for an LFSR of length 5. <br/>
+
 <center>
-<canvas id="lfsr" width="500" height="500">Please use a browser which supports HTML5 Canvas.</canvas>
+<canvas id="lfsr" width="500" height="200">Please use a browser which supports HTML5 Canvas.</canvas>
 </center>
 <br/>
 Enter initial taps: <input id="taps" value="10001">
