@@ -119,6 +119,7 @@ function draw() {
         drawOutput(output);
         iv_x = XOR_X;
         iv_y = XOR_Y;
+        rdx = 0;
         drawIv(iv_val);
         STAGE = 1;
     } else if (STAGE == 1) {
