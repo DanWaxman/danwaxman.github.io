@@ -7,10 +7,14 @@ const START_X = 50;
 const START_Y = 0;
 const XOR_X = START_X + BOX_WIDTH * N_OF_REG / 2;
 const XOR_Y = 105;
-const ci = [1, 0, 0, 0, 1];
+var ci = [1, 0, 0, 0, 1];
 
 var registers = "10011";
 var iv_val = "1";
+
+function i() {
+    document.getElementById("start").onclick = startAnimation;
+}
 
 function init() {
 ctx.clearRect(0,0,500,500);
@@ -235,5 +239,26 @@ function xor(r) {
     return (sum % 2).toString();
 }
 
-setInterval(draw, anim_dt);
+function startAnimation() {
+    registers = document.getElementById("registers").value;
+    ci_input = document.getElementById("taps").value;
+    ci = [];
+    for (var i = 0; i < ci_input.length; i++) {
+        if (ci_input[i] == "1") {
+            ci[i] = 1;
+        } else if (ci_input[i] == "0") {
+            ci[i] = 0;
+        }
+    }
+
+    console.log(registers);
+    console.log(ci);
+
+    iv_val = xor(registers);
+
+    setInterval(draw, anim_dt);
+}
+
+i();
+
 
