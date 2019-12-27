@@ -7,6 +7,10 @@ const START_X = 50;
 const START_Y = 0;
 const XOR_X = START_X + BOX_WIDTH * N_OF_REG / 2;
 const XOR_Y = 105;
+const ci = [1, 0, 0, 0, 1];
+
+var registers = "10011";
+var iv_val = "1";
 
 function init() {
 ctx.clearRect(0,0,500,500);
@@ -16,9 +20,20 @@ for (var i = 0; i < N_OF_REG; i++) {
     ctx.rect(START_X + BOX_WIDTH * i, START_Y, BOX_WIDTH, BOX_HEIGHT);
 }
 
+ctx.stroke();
+
 for (var i = 0; i < N_OF_REG; i++) {
+    ctx.beginPath();
     arrow(ctx, START_X + BOX_WIDTH * (i + 1/2) , START_Y + BOX_HEIGHT, XOR_X, XOR_Y - 5);
+    if (ci[i] == 1) {
+        ctx.strokeStyle = "red";
+    } else {
+        ctx.strokeStyle = "black";
+    }
+    ctx.stroke();
 }
+
+ctx.beginPath();
 
 ctx.font = "24px Arial";
 ctx.textAlign = "center";
@@ -26,6 +41,7 @@ ctx.textBaseline = "middle";
 ctx.fillText("⊕", XOR_X, XOR_Y);
 iv(ctx);
 arrow(ctx, START_X + BOX_WIDTH * N_OF_REG, START_Y + BOX_HEIGHT / 2, START_X + BOX_WIDTH * N_OF_REG + 50, START_Y + BOX_HEIGHT / 2);
+ctx.strokeStyle = "black";
 ctx.stroke();
 
 function iv(context) {
@@ -53,12 +69,12 @@ function arrow(context, fx, fy, tx, ty) {
 }
 }
 
-function drawRegisters(registers) {
+function drawRegisters(registers, dx = 0) {
     ctx.font = "18px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    for (var i = 0; i < N_OF_REG; i++) {
-        ctx.fillText(registers[N_OF_REG - i - 1], START_X + BOX_WIDTH * (i + 1/2), START_Y + BOX_HEIGHT / 2);
+    for (var i = 0; i < registers.length; i++) {
+        ctx.fillText(registers[i], START_X + BOX_WIDTH * (i + 1/2) + dx, START_Y + BOX_HEIGHT / 2);
     }
     ctx.stroke();
 }
@@ -73,39 +89,49 @@ function drawIv(iv, x = XOR_X, y = XOR_Y + 25) {
 var STAGE = 0;
 var iv_x = XOR_X;
 var iv_y = XOR_Y + 25;
+var rdx = 0;
 function draw() {
     if (STAGE == 0) {
         init();
-        drawRegisters("10011");
-        drawIv("1");
+        drawRegisters(registers);
+        drawIv(iv_val);
         STAGE = 1;
     } else if (STAGE == 1) {
         init();
-        drawRegisters("10011");
+        drawRegisters(registers);
         iv_x -= 10;
-        drawIv("1", iv_x, iv_y);
+        drawIv(iv_val, iv_x, iv_y);
         if (iv_x < 20) {
             iv_x = 15;
             STAGE = 2;
         }
     } else if (STAGE == 2) {
         init();
-        drawRegisters("10011");
+        drawRegisters(registers);
         iv_y -= 10;
         if (iv_y < START_Y + BOX_HEIGHT / 2) {
             iv_y = START_Y + BOX_HEIGHT / 2;
             STAGE = 3;
         }
-        drawIv("1", iv_x, iv_y);
-    } else if (STAGE = 3) {
+        drawIv(iv_val, iv_x, iv_y);
+    } else if (STAGE == 3) {
         init();
-        drawRegisters("10011");
+        drawRegisters(registers);
         iv_x += 10;
         if (iv_x > START_X - BOX_WIDTH / 2) {
             iv_x = START_X - BOX_WIDTH / 2;
             STAGE = 4;
+            registers = iv_val + registers;
         }
-        drawIv("1", iv_x, iv_y);
+        drawIv(iv_val, iv_x, iv_y);
+    } else if (STAGE == 4) {
+        init();
+        rdx += 10;
+        if (rdx > BOX_WIDTH) {
+            rdx = BOX_WIDTH;
+            STAGE = 5;
+        }
+        drawRegisters(registers, -BOX_WIDTH + rdx);
     }
 }
 
