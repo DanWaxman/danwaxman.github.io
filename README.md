@@ -1,4 +1,16 @@
 # danwaxman.github.io
+
+<h1>Latest Posts</h1>
+
+<ul>
+    {% for post in site.posts %}
+        <li>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                  <p>{{ post.excerpt }}</p>
+        </li>
+    {% endfor %}
+</ul>
+
 Some projects I've worked on/am working on.
 
 [Lissajous](Lissajous) is a [Lissajous Curve](https://en.wikipedia.org/wiki/Lissajous_curve) generator, creating animations of a Lissajous curve based on customized parameters.

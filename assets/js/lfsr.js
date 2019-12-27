@@ -63,15 +63,51 @@ function drawRegisters(registers) {
     ctx.stroke();
 }
 
-function drawIv(iv) {
+function drawIv(iv, x = XOR_X, y = XOR_Y + 25) {
    ctx.font = "18px Arial";
    ctx.textAlign = "center";
    ctx.textBaseline = "middle";
-   ctx.fillText(iv, XOR_X, XOR_Y + 25);
+   ctx.fillText(iv, x, y);
    ctx.stroke();
 }
+var STAGE = 0;
+var iv_x = XOR_X;
+var iv_y = XOR_Y + 25;
+function draw() {
+    if (STAGE == 0) {
+        init();
+        drawRegisters("10011");
+        drawIv("1");
+        STAGE = 1;
+    } else if (STAGE == 1) {
+        init();
+        drawRegisters("10011");
+        iv_x -= 10;
+        drawIv("1", iv_x, iv_y);
+        if (iv_x < 20) {
+            iv_x = 15;
+            STAGE = 2;
+        }
+    } else if (STAGE == 2) {
+        init();
+        drawRegisters("10011");
+        iv_y -= 10;
+        if (iv_y < START_Y + BOX_HEIGHT / 2) {
+            iv_y = START_Y + BOX_HEIGHT / 2;
+            STAGE = 3;
+        }
+        drawIv("1", iv_x, iv_y);
+    } else if (STAGE = 3) {
+        init();
+        drawRegisters("10011");
+        iv_x += 10;
+        if (iv_x > START_X - BOX_WIDTH / 2) {
+            iv_x = START_X - BOX_WIDTH / 2;
+            STAGE = 4;
+        }
+        drawIv("1", iv_x, iv_y);
+    }
+}
 
-init();
-drawRegisters("10011");
-drawIv("1");
+setInterval(draw, 200);
 
