@@ -113,7 +113,8 @@ const anim_dt = 20;
 const anim_dz = 2;
 
 function draw() {
-    if (STAGE == 0) {
+    switch (STAGE) {
+    case 0:
         init();
         drawRegisters(registers);
         drawOutput(output);
@@ -122,7 +123,8 @@ function draw() {
         rdx = 0;
         drawIv(iv_val);
         STAGE = 1;
-    } else if (STAGE == 1) {
+        break;
+    case 1:
         init();
         drawRegisters(registers);
         drawOutput(output);
@@ -132,7 +134,8 @@ function draw() {
             iv_x = 15;
             STAGE = 2;
         }
-    } else if (STAGE == 2) {
+        break;
+    case 2:
         init();
         drawRegisters(registers);
         drawOutput(output);
@@ -142,7 +145,8 @@ function draw() {
             STAGE = 3;
         }
         drawIv(iv_val, iv_x, iv_y);
-    } else if (STAGE == 3) {
+        break;
+    case 3:
         init();
         drawRegisters(registers);
         drawOutput(output);
@@ -153,7 +157,8 @@ function draw() {
             registers = iv_val + registers;
         }
         drawIv(iv_val, iv_x, iv_y);
-    } else if (STAGE == 4) {
+        break;
+    switch 4:
         init();
         drawOutput(output);
         rdx += anim_dz;
@@ -168,7 +173,8 @@ function draw() {
             rdx = 0;
         }
         drawRegisters(registers, -BOX_WIDTH + rdx);
-    } else if (STAGE == 5) {
+        break;
+    case 5:
         init();
         drawRegisters(registers);
         drawOutput(output);
@@ -178,7 +184,8 @@ function draw() {
             STAGE = 6;
         }
         drawIv(current_out, iv_x, iv_y);
-    } else if (STAGE == 6) {
+        break;
+    case 6:
         init();
         drawRegisters(registers);
         drawOutput(output);
@@ -189,7 +196,8 @@ function draw() {
             STAGE = 7;
         }
         drawIv(current_out, iv_x, iv_y);
-    } else if (STAGE == 7) {
+        break;
+    case 7:
         init();
         drawRegisters(registers);
         drawOutput(output);
@@ -202,7 +210,8 @@ function draw() {
             STAGE = 8;
         }
         drawIv(current_out, iv_x, iv_y);
-    } else if (STAGE == 8) {
+        break;
+    case 8:
         init();
         drawRegisters(registers);
         drawOutput(output);
@@ -227,6 +236,7 @@ function draw() {
         drawRegisters(filt_reg, dx, rdx, (BOX_WIDTH * N_OF_REG - 2 * dx) / N_OF_REG );//, BOX_WIDTH / (1 + rdx / 25));
         // TODO: MAKE THIS NOT SHIT
         // AND ALSO FOLLOW LINES
+        break;
     }
 }
 
