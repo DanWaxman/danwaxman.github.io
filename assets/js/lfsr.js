@@ -158,7 +158,7 @@ function draw() {
         }
         drawIv(iv_val, iv_x, iv_y);
         break;
-    switch 4:
+    case 4:
         init();
         drawOutput(output);
         rdx += anim_dz;
