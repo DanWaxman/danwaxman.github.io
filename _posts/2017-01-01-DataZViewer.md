@@ -1,0 +1,22 @@
+---
+title: DataZViewer
+layout: default
+---
+<link rel="stylesheet" href="/assets/css/datazstyle.css" type="text/css">
+<div class="container">
+<canvas id="canvas" width="1000" height="500"></canvas>
+<br/>
+<input type="file" id="files" name="files[]" multiple />
+<div style="text-align: center; width: 300px">
+Speed:
+</div>
+<input type="range" min="1" max="1000" value="500" class="slider" id="speed" class="slider">
+<br/>
+<button id="initiator" class="button">Click to draw.</button>
+<br/>
+<button id="pause-button" class="button">Click to pause.</button>
+<br/>
+<button id="play-button" class="button">Click to play.</button>
+<br/>
+</div>
+<script type="text/javascript" src="/assets/js/datazdraw.js"></script>
