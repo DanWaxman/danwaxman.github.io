@@ -5,7 +5,7 @@ body {
     overflow: hidden;
     background-color: white;
     width: 100%;
-    font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: 'Varta', sans-serif;
 }
 
 a {
@@ -53,6 +53,7 @@ blockquote {
     background-color: #aaaaaa;
     font-size: 12px;
     height: 3.5em;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 .navlink {
@@ -85,3 +86,22 @@ hr {
 .sideimage {
     width: 100%;
 }
+
+.notes-left {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    font-size: 18px;
+}
+
+.notes-right {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    font-size: 18px;
+}
+
+.notes-right > .img {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+}
+
