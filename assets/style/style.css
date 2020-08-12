@@ -83,8 +83,15 @@ hr {
     font-size: 18px;
 }
 
+#intro > .img {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+}
+
 .sideimage {
     width: 100%;
+    vertical-align: middle;
 }
 
 .notes-left {
