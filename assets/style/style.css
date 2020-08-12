@@ -77,40 +77,29 @@ hr {
 	border-top: 2px dashed #8c8b8b;
 }
 
-#intro {
+.grid-80-20 {
     display: grid;
     grid-template-columns: 80% 20%;
     font-size: 18px;
 }
 
-#intro > .img {
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: right !important;
-}
-
-.sideimage {
-    width: 100%;
-    vertical-align: middle;
-}
-
-.notes-left {
+.grid-20-80 {
     display: grid;
     grid-template-columns: 20% 80%;
     font-size: 18px;
 }
 
-.notes-left > div {
+.grid-20-80 > div {
     padding-left: 2em;
 }
 
-.notes-right {
+.grid-80-20 {
     display: grid;
     grid-template-columns: 80% 20%;
     font-size: 18px;
 }
 
-.notes-right > .img {
+.grid-80-20 > .img {
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: right !important;
