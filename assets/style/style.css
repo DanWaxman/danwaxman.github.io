@@ -4,16 +4,84 @@ body {
     position: absolute;
     overflow: hidden;
     background-color: white;
+    width: 100%;
+    font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 a {
-    color: aqua;
+    color: #000;
+    text-decoration: underline dotted;
+    text-decoration-skip-ink: none;
 }
 
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 1em!important;
+    padding-right: 1em!important;
 }
 
+.logo {
+    height: 6em;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 6em auto auto;
+    font-size: 16px;
+    padding-top: 1em
+}
+
+h1 {
+    padding-left: 10px;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+blockquote {
+    text-align: right;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #aaaaaa;
+    font-size: 12px;
+    height: 3.5em;
+}
+
+.navlink {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    border-right: 1px solid black;
+}
+
+.navlink-last {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    border-left: 1px solid black;
+}
+
+hr {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+}
+
+#intro {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    font-size: 18px;
+}
+
+.sideimage {
+    width: 100%;
+}
