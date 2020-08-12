@@ -17,8 +17,8 @@ a {
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1em!important;
-    padding-right: 1em!important;
+    padding-left: 1em !important;
+    padding-right: 1em !important;
 }
 
 .logo {
@@ -73,8 +73,8 @@ blockquote {
 }
 
 hr {
-	background-color: #fff;
-	border-top: 2px dashed #8c8b8b;
+    background-color: #fff;
+    border-top: 2px dashed #8c8b8b;
 }
 
 .grid-80-20 {
@@ -104,4 +104,3 @@ hr {
     background-repeat: no-repeat !important;
     background-position: right !important;
 }
-
