@@ -93,6 +93,12 @@ hr {
     padding-left: 2em;
 }
 
+.grid-20-20 > .img {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: left !important;
+}
+
 .grid-80-20 {
     display: grid;
     grid-template-columns: 80% 20%;
@@ -103,4 +109,30 @@ hr {
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: right !important;
+}
+
+.centered {
+    text-align: center;
+}
+
+.centered > img {
+    height: 20em;
+}
+
+iframe {
+    overflow: hidden;
+}
+
+.post {
+    text-decoration: none !important;
+}
+
+.post-snippet {
+    
+}
+
+.post-snippet > h2 {
+    color: #000;
+    text-decoration: underline dotted !important;
+    text-decoration-skip-ink: none !important;
 }
