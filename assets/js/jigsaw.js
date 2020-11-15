@@ -1,15 +1,42 @@
-var color = [0, 0, 0, 255]
+var color = [255, 0, 0, 255]
 
 $(document).ready(function () {
     var squareTiling = $("#squareTiling");
-    setupSquareTiling(squareTiling, 20, 20);
+    setupSquareTiling(squareTiling, 5, 5);
+    
+    var squareTilingPicker = $("#squareTilingPicker");
+    setupPicker(squareTilingPicker);
 
     squareTiling.click(function (e) {
         var mouseX = e.pageX - this.offsetLeft;
         var mouseY = e.pageY - this.offsetTop;
         paintBucket(color, mouseX, mouseY, this);
     });
+    
+    squareTilingPicker.click(function (e) {
+        var mouseX = e.pageX - this.offsetLeft;
+        var mouseY = e.pageY - this.offsetTop;
+        var ctx = this.getContext("2d");
+        color = ctx.getImageData(mouseX, mouseY, 1, 1).data;
+        console.log(color);
+    });
 });
+
+
+function setupPicker(domElement) {
+    var ctx = domElement[0].getContext("2d");
+    var h = domElement[0].height;
+    var w = domElement[0].width;
+    var grad = ctx.createLinearGradient(0, 0, w, h);
+    
+    var colors = ["white", "red", "orange", "green", "blue", "purple", "black"];
+    for (var i = 0; i < colors.length; i++) {
+        grad.addColorStop(i / colors.length, colors[i]);
+    }
+    
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, w, h);
+}
 
 function setupSquareTiling(domElement, nRows, nCols) {
     var h = domElement[0].height;
@@ -30,6 +57,7 @@ function setupSquareTiling(domElement, nRows, nCols) {
 }
 
 function paintBucket(col, x, y, domElement) {
+    // Based on http://www.williammalone.com/articles/html5-canvas-javascript-paint-bucket-tool/
     var h = domElement.height;
     var w = domElement.width;
     var ctx = domElement.getContext("2d");
@@ -62,7 +90,8 @@ function paintBucket(col, x, y, domElement) {
                     leftChecked = false;
                 }
             }
-
+            
+            // Check right pixel
             if (x < w - 1) {
                 if (colorMatch(baseColor, x + 1, y, w, h, imageData) && !rightChecked) {
                     stack.push([x + 1, y]);
