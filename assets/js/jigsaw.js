@@ -24,7 +24,7 @@ $(document).ready(function () {
     });
 
     var triangleTiling = $("#triangleTiling");
-    setupTriangleTiling(triangleTiling, 6, 6, 3, 3);
+    setupTriangleTiling(triangleTiling, 2, 2, 3, 3);
 
     var triangleTilingPicker = $("#triangleTilingPicker");
     setupPicker(triangleTilingPicker);
