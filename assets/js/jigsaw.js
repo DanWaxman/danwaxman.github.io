@@ -1,6 +1,7 @@
 var color = [255, 0, 0, 255];
 var colors = ["#f56c42", "#fcda42", "#88f23d", "#2b8c6a", "#3dd5e3", "#8654e3", "#e02b46"];
 var colorsArrays = [[245, 108, 66, 255], [252, 218, 66, 255], [136,242,61,255], [43,140,106,255], [61,213,227,255], [134,84,227,255], [224,43,70,255]];
+var sin60 = Math.sin(Math.PI / 3);
 
 $(document).ready(function () {
     var squareTiling = $("#squareTiling");
@@ -21,7 +22,63 @@ $(document).ready(function () {
         var ctx = this.getContext("2d");
         color = ctx.getImageData(mouseX, mouseY, 1, 1).data;
     });
+    
+    var triangleTiling = $("#triangleTiling");
+    setupTriangleTiling(triangleTiling, 20, 10, 2, 2);
+    
+    var triangleTilingPicker = $("#triangleTilingPicker");
+    setupPicker(triangleTilingPicker);
+    
+    triangleTiling.click(function (e) {
+        var mouseX = e.pageX - this.offsetLeft;
+        var mouseY = e.pageY - this.offsetTop;
+        paintBucket(color, mouseX, mouseY, this);
+    });
+    
+    triangleTilingPicker.click(function (e) {
+        var mouseX = e.pageX - this.offsetLeft;
+        var mouseY = e.pageY - this.offsetTop;
+        var ctx = this.getContext("2d");
+        color = ctx.getImageData(mouseX, mouseY, 1, 1).data;
+    });
 });
+
+function setupTriangleTiling(domElement, nRows, nCols, sizeX, sizeY) {
+    var h = domElement[0].height;
+    var w = domElement[0].width;
+    var ctx = domElement[0].getContext("2d");
+
+    ctx.beginPath();
+    for (var i = 0; i < nRows; i++) {
+        ctx.moveTo(0, h * i / nRows);
+        ctx.lineTo(w, h * i / nRows);
+    }
+
+    for (var j = -nCols + 1; j < nCols; j++) {
+        ctx.moveTo(w * j / nCols, 0);
+        ctx.lineTo(w * j / nCols + h * sin60, h);
+    }
+    for (var j = 0; j < 2*nCols; j++) {
+        ctx.moveTo(w * j / nCols, 0);
+        ctx.lineTo(w * j / nCols - h * sin60, h);
+    }
+    ctx.stroke();
+
+    /*var rowIndex = 0;
+    var colIndex = 0;
+    for (var row = 0; row < nRows; row++) {
+        rowIndex = Math.floor(row / sizeY) * 2;
+        for (var column = 0; column < nCols; column++) {
+            colIndex = Math.floor(column / sizeX);
+            
+            var x = h * (column + 0.5) / nCols;
+            var y = w * (row + 0.5) / nRows;
+            
+            color = colorsArrays[(rowIndex + colIndex) % colors.length];
+            paintBucket(color, Math.floor(x), Math.floor(y), domElement[0]);
+        }
+    }*/
+}
 
 
 function setupPicker(domElement) {
