@@ -1,8 +1,10 @@
-var color = [255, 0, 0, 255]
+var color = [255, 0, 0, 255];
+var colors = ["#f56c42", "#fcda42", "#88f23d", "#2b8c6a", "#3dd5e3", "#8654e3", "#e02b46"];
+var colorsArrays = [[245, 108, 66, 255], [252, 218, 66, 255], [136,242,61,255], [43,140,106,255], [61,213,227,255], [134,84,227,255], [224,43,70,255]];
 
 $(document).ready(function () {
     var squareTiling = $("#squareTiling");
-    setupSquareTiling(squareTiling, 5, 5);
+    setupSquareTiling(squareTiling, 20, 20, 4, 4);
     
     var squareTilingPicker = $("#squareTilingPicker");
     setupPicker(squareTilingPicker);
@@ -18,7 +20,6 @@ $(document).ready(function () {
         var mouseY = e.pageY - this.offsetTop;
         var ctx = this.getContext("2d");
         color = ctx.getImageData(mouseX, mouseY, 1, 1).data;
-        console.log(color);
     });
 });
 
@@ -27,18 +28,14 @@ function setupPicker(domElement) {
     var ctx = domElement[0].getContext("2d");
     var h = domElement[0].height;
     var w = domElement[0].width;
-    var grad = ctx.createLinearGradient(0, 0, w, h);
     
-    var colors = ["white", "red", "orange", "green", "blue", "purple", "black"];
     for (var i = 0; i < colors.length; i++) {
-        grad.addColorStop(i / colors.length, colors[i]);
+        ctx.fillStyle = colors[i];
+        ctx.fillRect(0, i*h/colors.length, w, h/colors.length);
     }
-    
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, w, h);
 }
 
-function setupSquareTiling(domElement, nRows, nCols) {
+function setupSquareTiling(domElement, nRows, nCols, sizeX, sizeY) {
     var h = domElement[0].height;
     var w = domElement[0].width;
     var ctx = domElement[0].getContext("2d");
@@ -54,6 +51,21 @@ function setupSquareTiling(domElement, nRows, nCols) {
         ctx.lineTo(w * j / nCols, h);
     }
     ctx.stroke();
+
+    var rowIndex = 0;
+    var colIndex = 0;
+    for (var row = 0; row < nRows; row++) {
+        rowIndex = Math.floor(row / sizeY) * 2;
+        for (var column = 0; column < nCols; column++) {
+            colIndex = Math.floor(column / sizeX);
+            
+            var x = h * (column + 0.5) / nCols;
+            var y = w * (row + 0.5) / nRows;
+            
+            color = colorsArrays[(rowIndex + colIndex) % colors.length];
+            paintBucket(color, Math.floor(x), Math.floor(y), domElement[0]);
+        }
+    }
 }
 
 function paintBucket(col, x, y, domElement) {
@@ -65,6 +77,14 @@ function paintBucket(col, x, y, domElement) {
 
     var imageData = ctx.getImageData(0, 0, w, h);
     var baseColor = imageData.data.slice((y * w + x) * 4, (y * w + x + 1) * 4);
+    
+    var sameColors = true;
+    for (var i = 0; i < 4; i++) {
+        sameColors &= (col[i] == baseColor[i]);
+    }
+    if (sameColors) {
+        return true;
+    }
 
     while (stack.length > 0) {
         var next = stack.pop();
