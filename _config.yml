@@ -8,7 +8,7 @@ middle_name:
 last_name: Waxman
 email: daniel.waxman@stonybrook.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  My personal website. Based on [*folio](https://github.com/bogoli/-folio) design.
+  My personal website. Words, and stuff.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
