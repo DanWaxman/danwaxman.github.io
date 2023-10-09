@@ -1,97 +1,75 @@
 - title: General Information
   type: map
   contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+    - name: Name
+      value: Daniel Waxman
+    - name: Website
+      value: <a href="https://danwaxman.github.io"><tt>danwaxman.github.io</tt></a>
+    - name: Address
+      value: Department of Electrical & Computer Engineering, Stony Brook University
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+    - title: Ph.D. in Electrical Engineering
+      institution: Stony Brook University, Stony Brook, New York
+      year: 2021-Present
+      description: 
+        - Advised by <a href="https://sites.google.com/stonybrook.edu/petardjuric/">Petar Djurić</a>
+    - title: B.S. in Mathematics & Applied Mathematics and Statistics
+      institution: Stony Brook University, Stony Brook, New York
+      year: 2018-2021
 
-- title: Experience
+- title: Research Talks
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+    - title: "Acoustics Research Institute of the Austrian Academy of Sciences"
+      year: 2023
+      description: "Talk Title: Causal Discovery via Quantifying Influences"
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+    - title: Bellairs Workshop on Machine Learning and Statistical Signal Processing for Data on Graphs
+      year: 2023
+      description: "Talk Title: Bayesian Combination"
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Teaching
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Random Signals and Systems (ESE 306 @ SBU)
+      year: Summer 2022
+  contents:
+    - title: Random Signals and Systems (ESE 306 @ SBU)
+      year: Spring 2022
+  contents:
+    - title: Programming Fundamentals (ESE 124 @ SBU)
+      year: Fall 2021
 
-- title: Honors and Awards
+- title: Outreach and Service
   type: time_table
   contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
-- title: Academic Interests
+    - year: 2021-2023
+      title: Stony Brook University Graduate Student Organization
+      items:
+        - Primary Senator, Department of Electrical and Computer Engineering
+        - Member of Diversity, Equity, and Inclusion Committee
+        - Graduate Student Representative for Graduate Council
+        - Reviewer for the Distinguished Travel Award
+    - year: 2022-2023
+      title: SBU Strategic Planning Steering Committee
+      items:
+        - Member of the Strategic Planning Steering Committee, helping to identify priorities for upcoming strategic plan.
+        - Member of the Project REACH Visioning Committee that drafted a new vision statement for the university
+      
+- title: Mentoring
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: CUNY Directed Reading Program
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Masroor Khokhodzhaev, <i>Dynamic Programming and Reinforcement Learning</i>
+        - Percy Martinez, <i>Fourier Analysis and Its Applications</i>
+        - Isabella Chittumuri, <i>Elements of Statistical Learning</i>
+    - title: Stony Brook University Directed Reading Program
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Shailen Smith, <i>Probabilistic Machine Learning</i>
+    - title: Bayesian Data Analysis for the Global South (GSU)
+      items:
+        - Volunteer Teaching Assistant for online course aimed at the Global South and other underrepresented groups taught by Aki Vehtari
