@@ -16,6 +16,7 @@ My main research interests include:
 
 ## publications
 <div class="publications">
+<p>˟ denotes equal contribution.</p>
 
 {% bibliography -f {{ site.scholar.bibliography }} %}
 

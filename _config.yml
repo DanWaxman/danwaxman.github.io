@@ -270,7 +270,7 @@ display_categories: ['blockquotes'] # these categories will be displayed on the 
 
 scholar:
 
-  last_name: [Waxman]
+  last_name: [Waxman, Waxman˟]
   first_name: [Daniel, D.]
 
   style: apa
