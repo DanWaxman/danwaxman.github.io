@@ -23,6 +23,10 @@
 - title: Research Talks
   type: time_table
   contents:
+    - title: "2024 SIAM New York-New Jersey-Pennsylvania Section Conference"
+      year: 2024
+      description: "Optimizing Observation Locations via Minimizing Information Loss"
+
     - title: "Acoustics Research Institute of the Austrian Academy of Sciences"
       year: 2023
       description: "Talk Title: Causal Discovery via Quantifying Influences"
@@ -34,21 +38,22 @@
 - title: Teaching
   type: time_table
   contents:
-    - title: Random Signals and Systems (ESE 306 @ SBU)
+    - title: Understanding Machine Learning (ESE 188 @ SBU, Instructor)
+      year: Spring 2025
+    - title: Random Signals and Systems (ESE 306 @ SBU, Graduate TA)
       year: Summer 2022
-    - title: Random Signals and Systems (ESE 306 @ SBU)
+    - title: Random Signals and Systems (ESE 306 @ SBU, Graduate TA)
       year: Spring 2022
-    - title: Programming Fundamentals (ESE 124 @ SBU)
+    - title: Programming Fundamentals (ESE 124 @ SBU, Graduate TA)
       year: Fall 2021
 
 - title: Outreach and Service
   type: time_table
   contents:
-    - year: 2021-2023
+    - year: 2021-2025
       title: Stony Brook University Graduate Student Organization
       items:
         - Primary Senator, Department of Electrical and Computer Engineering
-        - Member of Diversity, Equity, and Inclusion Committee
         - Graduate Student Representative for Graduate Council
         - Reviewer for the Distinguished Travel Award
     - year: 2022-2023
@@ -62,12 +67,15 @@
   contents:
     - title: CUNY Directed Reading Program
       items: 
-        - Masroor Khokhodzhaev, <i>Dynamic Programming and Reinforcement Learning</i>
-        - Percy Martinez, <i>Fourier Analysis and Its Applications</i>
-        - Isabella Chittumuri, <i>Elements of Statistical Learning</i>
+        - Mike Prebil, <i>Gaussian Processes and Bayesian Optimization.</i>
+        - Edgar Cuapio Diaz, <i>Gaussian Processes and Bayesian Optimization.</i>
+        - Jonathan Jaimangal, <i>Hamiltonian Monte Carlo.</i> <b>[Winner of Outstanding Poster Award</b>
+        - Masroor Khokhodzhaev, <i>Dynamic Programming and Reinforcement Learning.</i>
+        - Percy Martinez, <i>Fourier Analysis and Its Applications.</i>
+        - Isabella Chittumuri, <i>Elements of Statistical Learning.</i>
     - title: Stony Brook University Directed Reading Program
       items:
-        - Shailen Smith, <i>Probabilistic Machine Learning</i>
+        - Shailen Smith, <i>Probabilistic Machine Learning.</i>
     - title: Bayesian Data Analysis for the Global South (GSU)
       items:
         - Volunteer Teaching Assistant for online course aimed at the Global South and other underrepresented groups taught by Aki Vehtari
