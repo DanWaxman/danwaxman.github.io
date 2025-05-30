@@ -1,24 +1,35 @@
 ---
 ---
-@article{waxman2024obs,
+@article{waxman2025mil,
   selected    = {true},
   bibtex_show = {false},
-  author      = {Waxman, Daniel and Llorente, Fernando and Djurić, Petar {M.}},
-  title       = {Online Bayesian Stacking is a Portfolio Selection Problem},
+  author      = {Waxman, Daniel and Llorente, Fernando and Lamer, Katia and Djurić, Petar {M.}},
+  title       = {Designing an Optimal Sensor Network via Minimizing Information Loss},
   note        = {Submitted.},
-  year        = {2024},
-  abstract    = {We address the problem of simultaneously learning and combining several Bayesian models in an online, continual learning setting. In particular, we propose online Bayesian stacking (OBS), which combines Bayesian models by optimizing a log-score over predictive distributions. We make a novel connection by phrasing OBS as a portfolio selection problem, which unlocks a rich, well-studied theoretical framework with efficient algorithms and extensive regret analysis. This framework additionally elucidates a connection to online Bayesian model averaging (BMA), showing a similar algorithmic approach to different cost functions. Additional interpretation and analysis from the empirical Bayes perspective are provided, showing OBS optimizes the evidence of a mixture of estimators. Following the theoretical development of Bayesian stacking, we apply OBS to an illustrative toy problem. Finally, to show real-world effectiveness, we apply OBS to online basis expansions and Gaussian processes, replacing the online BMA approaches in the literature.}
+  year        = {2025},
+  abstract    = {Optimal experimental design is a classic topic in statistics, with many well-studied problems, applications, and solutions. The design problem we study is the placement of sensors to monitor spatiotemporal processes, explicitly accounting for the temporal dimension in our modeling and optimization. We observe that recent advancements in computational sciences often yield large datasets based on physics-based simulations, which are rarely leveraged in experimental design. We introduce a novel model-based sensor placement criterion, along with a highly-efficient optimization algorithm, which integrates physics-based simulations and Bayesian experimental design principles to identify sensor networks that ``minimize information loss'' from simulated data. Our technique relies on sparse variational inference and Gauss-Markov priors, and thus may adapt many techniques from Bayesian experimental design. We validate our method through a case study monitoring air temperature in Phoenix, Arizona, using state-of-the-art physics-based simulations. Our results show our framework to be superior to random or quasi-random sampling, particularly with a limited number of sensors. We conclude by discussing practical considerations and implications of our framework, including more complex modeling tools and real-world deployments.}
+}
+
+@article{waxman2025obs,
+  selected    = {true},
+  bibtex_show = {true},
+  author      = {Waxman, Daniel and Llorente, Fernando and Djurić, Petar {M.}},
+  title       = {Bayesian Ensembling: Insights from Online Optimization and Empirical Bayes},
+  note        = {Submitted.},
+  year        = {2025},
+  arxiv       = {https://arxiv.org/abs/2505.15638},
+  abstract    = {We revisit the classical problem of Bayesian ensembles and address the challenge of learning optimal combinations of Bayesian models in an online, continual learning setting.  To this end, we reinterpret existing approaches such as Bayesian model averaging (BMA) and Bayesian stacking through a novel empirical Bayes lens, shedding new light on the limitations and pathologies of BMA. Further motivated by insights from online optimization, we propose Online Bayesian Stacking (OBS), a method that optimizes the log-score over predictive distributions to adaptively combine Bayesian models. A key contribution of our work is establishing a novel connection between OBS and portfolio selection, bridging Bayesian ensemble learning with a rich, well-studied theoretical framework that offers efficient algorithms and extensive regret analysis. We further clarify the relationship between OBS and online BMA, showing that they optimize related but distinct cost functions. Through theoretical analysis and empirical evaluation, we identify scenarios where OBS outperforms online BMA and provide principled guidance on when practitioners should prefer one approach over the other.}
 }
 
 @inproceedings{llorente2025decentralized,
   selected    = {true},
-  bibtex_show = {false},
-  booktitle   = {2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  bibtex_show = {true},
+  booktitle   = {2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   author      = {Fernando Llorente* and Daniel Waxman* and Djurić, Petar {M.}},
   title       = {Decentralized Online Ensembles of Gaussian Processes for Multi-Agent Systems},
-  note        = {Accepted.},
   year        = {2025},
-  abbr        = {ICASSP '25},
+  arxiv       = {https://arxiv.org/abs/2502.05301},
+  abbr        = {ICASSP '25}
 }
 
 @article{butler2024tangent,
@@ -36,7 +47,7 @@
 }
 
 @inproceedings{waxman2024online,
-  selected    = {true},
+  selected    = {false},
   bibtex_show = {true},
   author      = {Waxman, Daniel and Djurić, Petar {M.}},
   booktitle   = {2024 27th International Conference on Information Fusion (FUSION)},
@@ -81,7 +92,7 @@
 }
 
 @inproceedings{ajirak2023fusion,
-  selected    = {true},
+  selected    = {false},
   bibtex_show = {true},
   author      = {Ajirak, Marzieh and Waxman, Daniel and Llorente, Fernando and Djurić, Petar {M.}},
   booktitle   = {2023 57th Asilomar Conference on Signals, Systems, and Computers},
@@ -98,7 +109,7 @@
 }
 
 @inproceedings{liu2023detecting,
-  selected    = {true},
+  selected    = {false},
   bibtex_show = {true},
   abbr        = {EUSIPCO '23},
   author      = {Liu, Yuhao and Cui, Chen and Waxman, Daniel and Butler, Kurt and Djurić, Petar {M.}},
