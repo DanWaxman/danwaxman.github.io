@@ -8,7 +8,7 @@ nav_order: 5
 ---
 
 As Instructor:
-- Understanding Machine Learning (ESE 188), Spring 2025. This was a general audience 3-credit course, aimed at gaining an intuitive understanding of modern machine learning techniques. This was a super interested course to prepare and teach, and I'm happy to chat about this experience with anyone preparing a similar course!
+- Understanding Machine Learning (ESE 188), Spring 2025 \& Fall 2025. This was a general audience 3-credit course, aimed at gaining an intuitive understanding of modern machine learning techniques. This was a super interested course to prepare and teach, and I'm happy to chat about this experience with anyone preparing a similar course!
 
 Some classes I've served as the teaching assistant for at SBU:
 - Random Signals and Systems (ESE 306), Spring 2022 & Summer 2022, Graduate Teaching Assistant \[[Recitation Notes](/assets/pdf/ESE_306_Recitation_Notes_All.pdf)\]
