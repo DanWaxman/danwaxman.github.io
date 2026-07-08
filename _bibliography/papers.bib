@@ -6,8 +6,9 @@
   author      = {Heinonen, Markus and Shenfeld, Yair and Baptista, Ricardo and Waxman, Daniel and Batenkov, Dmitry and Cooijmans, Tim and Bingham, Eli},
   title       = {Wasserstein Residuals: Learning Gradient Flows from Population Dynamics},
   year        = {2026},
-  arxiv       = {https://arxiv.org/abs/2607.04738},
+  arxiv       = {2607.04738},
   code        = {https://github.com/BasisResearch/wasserstein-residuals},
+  abstract    = { Reconstructing population dynamics is a central problem in the physical and data sciences. Often, the dynamics are modeled as a Wasserstein gradient flow (WGF): a curve of distributions driven by an energy functional. Though there are multiple mathematical characterizations of a WGF, the dominant algorithmic approach relies on the Jordan--Kinderlehrer--Otto (JKO) scheme. JKO-based methods are inflexible to time discretisation and require solving costly optimal transport problems. We take a residual approach, enforcing the continuity equations via a non-negative loss function whose minimum is the WGF. Combined with a data-fitting divergence, this gives a single global objective. This perspective unifies several existing methods and leads to a new particle-based method, stitching, that is simulation-free and robust to large gaps between observations. We demonstrate that the stitching method achieves state-of-the-art performance across trajectory inference benchmarks. For code see https://github.com/BasisResearch/wasserstein-residuals},
 }
 
 @misc{waxman2026dynestyx,
@@ -16,13 +17,14 @@
   author      = {Waxman, Daniel and Batenkov, Dmitry, and Feser, John and Zane, Andy and Bingham, Eli and Marzouk, Youssef and Levine, Matthew E.},
   title       = {dynestyx: A Probabilistic Programming Library for Dynamical Systems},
   year        = {2026},
-  arxiv       = {https://arxiv.org/abs/2606.16985},
+  arxiv       = {2606.16985},
   code        = {https://github.com/BasisResearch/dynestyx},
+  abstract    = { State-space models (SSMs) are the standard formalism for Bayesian treatment of dynamical systems, with natural applications in statistics, signal processing, and machine learning. Despite their importance in both theory and application, dynamical systems have proven difficult to incorporate in modern probabilistic programming languages (PPLs), making state-of-the-art methods less accessible to practitioners and introducing friction in following the "Bayesian workflow." We introduce dynestyx, a probabilistic programming library with first-class support for SSMs, including state-of-the-art methods in the estimation of both states and parameters. Through a single, unified interface, users may specify arbitrary priors for discrete-time or continuous-time dynamical systems, perform inference over mixed-effect data, and make state and parameter estimates with principled uncertainty quantification. },
 }
 
 @article{waxman2025mil,
   selected    = {true},
-  bibtex_show = {true},
+  bibtex_show = {false},
   author      = {Waxman, Daniel and Llorente, Fernando and Lamer, Katia and Djurić, Petar {M.}},
   title       = {Designing an Optimal Sensor Network via Minimizing Information Loss},
   journal     = {Bayesian Analysis},
@@ -38,11 +40,12 @@
   bibtex_show = {false},
   author      = {Waxman, Daniel and Llorente, Fernando and Djurić, Petar {M.}},
   title       = {Sequential Inference with Gaussian Processes: A Signal Processing Perspective},
-  note        = {Accepted.},
+  note        = {To Appear.},
   year        = {2026},
   journal     = {IEEE Signal Processing Magazine},
   abbr        = {SPM},
-  arxiv       = {https://arxiv.org/abs/2604.28163},
+  arxiv       = {2604.28163},
+  abstract    = { The proliferation of capable and efficient machine learning (ML) models marks one of the strongest methodological shifts in signal processing (SP) in its nearly 100-year history. ML models support the development of SP systems that represent complex, nonlinear relationships with high predictive accuracy. Adapting these models often requires sequential inference, which differs both theoretically and methodologically from the usual paradigm of ML, where data are often assumed independent and identically distributed. Gaussian processes (GPs) are a flexible yet principled framework for modeling random functions, and they have become increasingly relevant to SP as statistical and ML methods assume a more prominent role. We provide a self-contained, tutorial-style overview of GPs, with a particular focus on recent methodological advances in sequential, incremental, or streaming inference. We introduce these techniques from a signal-processing perspective while bridging them to recent advances in ML. Many of the developments we survey have direct applications to state-space modeling, sequential regression and forecasting, anomaly detection in time series, sequential Bayesian optimization, adaptive and active sensing, and sequential detection and decision-making. By organizing these advances from a signal-processing perspective, we intend to equip practitioners with practical tools and a coherent roadmap for deploying sequential GP models in real-world systems. },
 }
 
 @inproceedings{waxman2025hierarchical,
@@ -53,16 +56,18 @@
   booktitle   = {2025 Asilomar Conference on Signals, Systems, and Computers},
   abbr        = {ACSSC '25},
   year        = {2025}, 
+  abstract    = {Causal discovery in time-varying environments requires methods that accommodate changes in the underlying causal mechanisms while retaining computational tractability. Classical approaches impose a stationarity assumption that forces all observations to share a single directed acyclic graph (DAG), an assumption that fails in many real systems. Modern differentiable causal discovery frameworks address the static problem through continuous optimization but provide limited support for non-stationary settings. This paper introduces a hierarchical framework for non-stationary causal discovery based on an unconstrained parameterization of DAGs. A stochastic-process prior on the sequence of latent potentials restricts the temporal evolution of the graphs and permits smooth, abrupt, or locally adaptive structural changes. Random-walk, Gaussian-process, and switching-state priors arise as special cases. The resulting formulation produces a fully differentiable objective that incorporates data fit, sparsity, and temporal structure. Experiments under linear structural equation models show that appropriate temporal regularization improves the recovery of time-varying causal relationships relative to stationary estimators. The proposed framework, therefore, provides a flexible and computationally efficient approach to causal identification in non-stationary time series.},
 }
 
 @inproceedings{llorente2025robust,
-  selected    = {true},
+  selected    = {false},
   bibtex_show = {false},
   author      = {Llorente, Fernando and Waxman, Daniel and Jantre, Sanket and Urban, Nathan M. and Minkoff, Susan E.},
   title       = {Robust, Online, and Adaptive Decentralized Gaussian Processes},
   year        = {2026}, 
   booktitle   = {2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   abbr        = {ICASSP '26},
+  arxiv       = {2509.18011},
   abstract    = {Gaussian processes (GPs) offer a flexible, uncertainty-aware framework for modeling complex signals, but scale cubically with data, assume static targets, and are brittle to outliers, limiting their applicability in large-scale problems with dynamic and noisy environments. Recent work introduced decentralized random Fourier feature Gaussian processes (DRFGP), an online and distributed algorithm that casts GPs in an information-filter form, enabling exact sequential inference and fully distributed computation without reliance on a fusion center. In this paper, we extend DRFGP along two key directions: first, by introducing a robust-filtering update that downweights the impact of atypical observations; and second, by incorporating a dynamic adaptation mechanism that adapts to time-varying functions. The resulting algorithm retains the recursive information-filter structure while enhancing stability and accuracy. We demonstrate its effectiveness on a large-scale Earth system application, underscoring its potential for in-situ modeling.},
 }
 
@@ -73,21 +78,22 @@
   author      = {Waxman, Daniel and Llorente, Fernando and Djurić, Petar {M.}},
   title       = {Bayesian Ensembling: Insights from Online Optimization and Empirical Bayes},
   year        = {2026},
-  arxiv       = {https://arxiv.org/abs/2505.15638},
+  arxiv       = {2505.15638},
   journal     = {Transactions on Machine Learning Research (TMLR)},
   abbr        = {TMLR},
   abstract    = {We revisit the classical problem of Bayesian ensembles and address the challenge of learning optimal combinations of Bayesian models in an online, continual learning setting.  To this end, we reinterpret existing approaches such as Bayesian model averaging (BMA) and Bayesian stacking through a novel empirical Bayes lens, shedding new light on the limitations and pathologies of BMA. Further motivated by insights from online optimization, we propose Online Bayesian Stacking (OBS), a method that optimizes the log-score over predictive distributions to adaptively combine Bayesian models. A key contribution of our work is establishing a novel connection between OBS and portfolio selection, bridging Bayesian ensemble learning with a rich, well-studied theoretical framework that offers efficient algorithms and extensive regret analysis. We further clarify the relationship between OBS and online BMA, showing that they optimize related but distinct cost functions. Through theoretical analysis and empirical evaluation, we identify scenarios where OBS outperforms online BMA and provide principled guidance on when practitioners should prefer one approach over the other.}
 }
 
 @inproceedings{llorente2025decentralized,
-  selected    = {true},
+  selected    = {false},
   bibtex_show = {true},
   booktitle   = {2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   author      = {Fernando Llorente* and Daniel Waxman* and Djurić, Petar {M.}},
   title       = {Decentralized Online Ensembles of Gaussian Processes for Multi-Agent Systems},
   year        = {2025},
-  arxiv       = {https://arxiv.org/abs/2502.05301},
-  abbr        = {ICASSP '25}
+  arxiv       = {2502.05301},
+  abbr        = {ICASSP '25},
+  abstract    = { Flexible and scalable decentralized learning solutions are fundamentally important in the application of multi-agent systems. While several recent approaches introduce (ensembles of) kernel machines in the distributed setting, Bayesian solutions are much more limited. We introduce a fully decentralized, asymptotically exact solution to computing the random feature approximation of Gaussian processes. We further address the choice of hyperparameters by introducing an ensembling scheme for Bayesian multiple kernel learning based on online Bayesian model averaging. The resulting algorithm is tested against Bayesian and frequentist methods on simulated and real-world datasets. },
 }
 
 @article{butler2024tangent,
@@ -106,21 +112,21 @@
 
 @inproceedings{waxman2024online,
   selected    = {false},
-  bibtex_show = {true},
+  bibtex_show = {false},
   author      = {Waxman, Daniel and Djurić, Petar {M.}},
   booktitle   = {2024 27th International Conference on Information Fusion (FUSION)},
   title       = {A Gaussian Process-based Streaming Algorithm for Prediction of Time Series With Regimes and Outliers},
   abbr        = {FUSION '24},
   year        = {2024},
   code        = {https://github.com/DanWaxman/Lintel},
-  arxiv       = {http://arxiv.org/abs/2406.00570},
+  arxiv       = {2406.00570},
   pdf         = {https://ieeexplore.ieee.org/document/10706404},
   abstract    = {Online prediction of time series under regime switching is a widely studied problem in the literature, with many celebrated approaches. Using the non-parametric flexibility of Gaussian processes, the recently proposed INTEL algorithm provides a product of experts approach to online prediction of time series under possible regime switching, including the special case of outliers. This is achieved by adaptively combining several candidate models, each reporting their predictive distribution at time t. However, the INTEL algorithm uses a finite context window approximation to the predictive distribution, the computation of which scales cubically with the maximum lag, or otherwise scales quartically with exact predictive distributions. We introduce LINTEL, which uses the exact filtering distribution at time t with constant-time updates, making the time complexity of the streaming algorithm optimal. We additionally note that the weighting mechanism of INTEL is better suited to a mixture of experts approach, and propose a fusion policy based on arithmetic averaging for LINTEL. We show experimentally that our proposed approach is over five times faster than INTEL under reasonable settings with better quality predictions.}
 }
 
 @article{waxman2024doebe,
-  selected    = {true},
-  bibtex_show = {true},
+  selected    = {false},
+  bibtex_show = {false},
   abbr        = {TMLR},
   author      = {Waxman, Daniel and Djurić, Petar {M.}},
   title       = {Dynamic Online Ensembles of Basis Expansions},
@@ -128,14 +134,14 @@
   year        = {2024},
   code        = {https://github.com/DanWaxman/DynamicOnlineBasisExpansions},
   pdf         = {https://openreview.net/forum?id=aVOzWH1Nc5},
-  arxiv       = {http://arxiv.org/abs/2405.01365},
+  arxiv       = {2405.01365},
   abstract    = {Practical Bayesian learning often requires (1) online inference, (2) dynamic models, and (3) ensembling over multiple different models. Recent advances have shown how to use random feature approximations to achieve scalable, online ensembling of Gaussian processes with desirable theoretical properties and fruitful applications. One key to these methods' success is the inclusion of a random walk on the model parameters, which makes models dynamic. We show that these methods can be generalized easily to any basis expansion model and that using alternative basis expansions, such as Hilbert space Gaussian processes, often results in better performance. To simplify the process of choosing a specific basis expansion, our method's generality also allows the ensembling of several entirely different models, for example, a Gaussian process and polynomial regression. Finally, we propose a novel method to ensemble static and dynamic models together.}
 }
 
 @article{waxman2024dagmadce,
-  selected    = {true},
+  selected    = {false},
   abbr        = {OJ-SP},
-  bibtex_show = {true},
+  bibtex_show = {false},
   author      = {Waxman, Daniel and Butler, Kurt and Djurić, Petar {M.}},
   title       = {DAGMA-DCE: Interpretable, Non-Parametric Differentiable Causal Discovery},
   year        = {2024},
@@ -151,7 +157,7 @@
 
 @inproceedings{ajirak2023fusion,
   selected    = {false},
-  bibtex_show = {true},
+  bibtex_show = {false},
   author      = {Ajirak, Marzieh and Waxman, Daniel and Llorente, Fernando and Djurić, Petar {M.}},
   booktitle   = {2023 57th Asilomar Conference on Signals, Systems, and Computers},
   title       = {Fusion of Gaussian Process Predictions With Monte Carlo},
@@ -168,7 +174,7 @@
 
 @inproceedings{liu2023detecting,
   selected    = {false},
-  bibtex_show = {true},
+  bibtex_show = {false},
   abbr        = {EUSIPCO '23},
   author      = {Liu, Yuhao and Cui, Chen and Waxman, Daniel and Butler, Kurt and Djurić, Petar {M.}},
   booktitle   = {2023 31st European Signal Processing Conference (EUSIPCO)},
