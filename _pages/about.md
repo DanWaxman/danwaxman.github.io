@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral Research Scentist, Basis
+subtitle: Postdoctoral Research Scentist, Basis<br>Research Affiliate, MIT
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Basis Research Institute</p>
+    <p>Basis Research Institute & MIT</p>
     <p>Cambridge, Massachusetts, USA</p>
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
