@@ -6,7 +6,7 @@ subtitle: Postdoctoral Research Scientist, Basis<br>Research Affiliate, MIT
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_autumn_2026.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Basis Research Institute & MIT</p>
