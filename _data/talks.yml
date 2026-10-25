@@ -1,0 +1,117 @@
+# Public talks only. Keep each section newest first; featured talks use this order.
+- id: bayescomp-2027
+  title: Towards a Bayesian Workflow for Dynamical Systems
+  venue: BayesComp
+  year: 2027
+  section: upcoming
+  context: j-ISBA Sponsored Session
+
+- id: siam-cse-2027
+  title: Towards a Theory of Predictively-Oriented Filtering
+  venue: SIAM Conference on Computational Science and Engineering (CSE)
+  year: 2027
+  section: upcoming
+  context: 'Minisymposium on “Beyond Standard Bayesian Paradigms for Reliable Uncertainty Quantification”'
+
+- id: mit-physical-mathematics-2026
+  title: 'dynestyx: A Probabilistic Programming Language for Dynamical Systems'
+  venue: MIT Physical Mathematics Seminar
+  venue_url: https://math.mit.edu/pms/
+  date: '2026-11-03'
+  section: upcoming
+
+- id: asilomar-2026
+  title: Bayesian Learning of Graph-Based Interaction Potentials with Applications to Studying Animal Behavior
+  venue: Asilomar Conference on Signals, Systems, and Computers
+  date: '2026-10-27'
+  section: upcoming
+  slides_url: https://danwaxman.github.io/talks/asilomar_f26/
+
+- id: dartmouth-2026
+  title: 'dynestyx: A Probabilistic Programming Library for Dynamical Systems'
+  venue: Dartmouth Computational and Applied Mathematics Seminar
+  venue_url: https://math.dartmouth.edu/~acms/
+  date: '2026-09-29'
+  section: recent
+  slides_url: https://danwaxman.github.io/talks/dartmouth_cam_f26/
+  thumbnail: /assets/img/talks/dartmouth_cam_f26.webp
+  thumbnail_alt: Slide illustrating filtering, smoothing, forecasting, and parameter inference for an Ornstein–Uhlenbeck process.
+  featured: true
+
+- id: mit-cse-2026
+  title: 'dynestyx: A Probabilistic Programming Library for Dynamical Systems'
+  venue: MIT Computational Science and Engineering Community Seminar
+  venue_url: https://cse.mit.edu/seminars-and-events/cse-community-seminar-18sept26/
+  date: '2026-09-18'
+  section: recent
+  slides_url: https://danwaxman.github.io/talks/mit_cse_f26/
+  thumbnail: /assets/img/talks/mit_cse_f26.webp
+  thumbnail_alt: Slide connecting discrete-time state transitions and continuous-time drift and diffusion in state space models.
+  featured: false
+
+- id: siam-ne-2026
+  title: A Bayesian Recipe for Learning Hybrid Models from Noisy Data
+  venue: SIAM New England Section Annual Meeting
+  date: '2026-08-22'
+  section: recent
+  context: 'Minisymposium on “Generative Scientific Machine Learning for PDEs and Complex Physical Systems”'
+  slides_url: https://danwaxman.github.io/talks/siam_ne_26/
+  thumbnail: /assets/img/talks/siam_ne_26.webp
+  thumbnail_alt: Slide introducing a hybrid model that combines known and unknown components of stochastic dynamics.
+  featured: true
+
+- id: isba-2026
+  title: Online & Predictively-Oriented Model Fusion
+  venue: ISBA World Meeting
+  date: '2026-07-02'
+  section: recent
+  context: 'Session on “Calibrated Bayes: Model Design and Adaptation Under Limited Resources”'
+  slides_url: https://danwaxman.github.io/talks/isba_wm_26/
+  pdf_url: https://danwaxman.github.io/talks/isba_wm_26/ISBA_slides.pdf
+  thumbnail: /assets/img/talks/isba_wm_26.webp
+  thumbnail_alt: Diagram of three candidate models evolving over four time steps and combining into predictive ensembles.
+  featured: true
+
+- id: siam-uq-2026
+  title: 'GPs4SPs: Sequential Inference for Gaussian Processes in Signal Processing'
+  venue: SIAM Uncertainty Quantification
+  date: '2026-03-25'
+  section: recent
+  context: 'Minisymposium on “Sequential Inference for Dynamical Systems”'
+  slides_url: https://danwaxman.github.io/talks/siam_uq_26/
+  thumbnail: /assets/img/talks/siam_uq_26.webp
+  thumbnail_alt: Two-panel comparison of standard and robust Gaussian process predictions in the presence of outliers.
+  featured: false
+
+- id: queens-2026
+  title: Online Bayesian Learning and Ensembles
+  venue: Queens for Computing Colloquium, CUNY Queens College
+  date: '2026-02-09'
+  section: recent
+  slides_url: https://danwaxman.github.io/talks/q4c_feb_26/
+  thumbnail: /assets/img/talks/q4c_feb_26.webp
+  thumbnail_alt: Slide motivating online Gaussian process ensembles over different hyperparameters.
+  featured: false
+
+- id: siam-section-2024
+  title: Optimizing Observation Locations via Minimizing Information Loss
+  venue: SIAM New York-New Jersey-Pennsylvania Section Conference
+  year: 2024
+  section: archive
+  kind: contributed
+
+- id: austrian-academy-2023
+  title: Causal Discovery via Quantifying Influences
+  venue: Acoustics Research Institute of the Austrian Academy of Sciences
+  year: 2023
+  section: archive
+  kind: invited
+  abstract_url: https://www.oeaw.ac.at/en/ari/news/event/ari-guest-talk-13-september-2023
+  pdf_url: /assets/pdf/CausalInferenceViaQuantifying.pdf
+
+- id: bellairs-2023
+  title: Bayesian Combination
+  venue: Bellairs Workshop on Machine Learning and Statistical Signal Processing for Data on Graphs
+  year: 2023
+  section: archive
+  kind: invited

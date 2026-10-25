@@ -7,7 +7,7 @@ nav: true
 nav_order: 5
 ---
 
-As Instructor:
+as instructor:
 - Understanding Machine Learning (ESE 188), Spring 2025 & Fall 2025. This was a general audience 3-credit course, aimed at gaining an intuitive understanding of modern machine learning techniques. This was a super interesting course to prepare and teach, and I'm happy to chat about this experience with anyone preparing a similar course!
 
 Some classes I've served as the teaching assistant for at SBU:
@@ -15,7 +15,7 @@ Some classes I've served as the teaching assistant for at SBU:
 - Programming Fundamentals (ESE 124), Fall 2021, Graduate Teaching Assistant
 - Classical Physics I (PHY 131), Fall 2020, Undergraduate Teaching Assistant
 
-## Mentoring
+## mentoring
 
 In 2026, I mentored Luke Snow, a PhD research intern at Basis Research Institute, on Wiener-space cubature for filtering and sequential likelihood-informed subspaces.
 

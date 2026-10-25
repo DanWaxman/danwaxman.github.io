@@ -1,0 +1,34 @@
+{%- assign talk = include.talk -%}
+{%- assign talk_link = talk.slides_url | default: talk.pdf_url -%}
+{%- if talk_link and talk_link != empty -%}
+  {%- unless talk_link contains '://' -%}{%- assign talk_link = talk_link | relative_url -%}{%- endunless -%}
+{%- endif -%}
+{%- assign heading_level = include.heading_level | default: 3 -%}
+<article class="talk-row{% unless talk.thumbnail and talk_link %} talk-row--text-only{% endunless %}" aria-labelledby="talk-{{ talk.id }}">
+  {% if talk.thumbnail and talk_link %}
+    <a class="talk-thumbnail" href="{{ talk_link | escape }}" aria-label="Slides for {{ talk.title | escape }} at {{ talk.venue | escape }}">
+      <img src="{{ talk.thumbnail | relative_url }}" width="800" height="583" loading="lazy" decoding="async" alt="{{ talk.thumbnail_alt | escape }}">
+    </a>
+  {% endif %}
+  <div class="talk-details">
+    <h{{ heading_level }} class="talk-title" id="talk-{{ talk.id }}">
+      {% if talk_link %}<a href="{{ talk_link | escape }}">{{ talk.title | escape }}</a>{% else %}{{ talk.title | escape }}{% endif %}
+    </h{{ heading_level }}>
+    <p class="talk-meta">
+      {% if talk.date %}<time datetime="{{ talk.date | date: '%Y-%m-%d' }}">{{ talk.date | date: '%B %-d, %Y' }}</time>{% else %}{{ talk.year }}{% endif %}
+      <span aria-hidden="true"> · </span>
+      {% if talk.venue_url %}<a href="{{ talk.venue_url | escape }}">{{ talk.venue | escape }}</a>{% else %}{{ talk.venue | escape }}{% endif %}
+    </p>
+    {% if talk.context and include.show_context %}<p class="talk-context">{{ talk.context | escape }}</p>{% endif %}
+    {% if talk.slides_url or talk.pdf_url %}
+      <div class="talk-resources">
+        {% if talk.slides_url %}<a class="btn btn-sm" href="{{ talk.slides_url | escape }}">Slides<span class="sr-only"> for {{ talk.title | escape }} at {{ talk.venue | escape }}</span></a>{% endif %}
+        {% if talk.pdf_url %}
+          {% assign pdf_url = talk.pdf_url %}
+          {% unless pdf_url contains '://' %}{% assign pdf_url = pdf_url | relative_url %}{% endunless %}
+          <a class="btn btn-sm" href="{{ pdf_url | escape }}">PDF<span class="sr-only"> for {{ talk.title | escape }} at {{ talk.venue | escape }}</span></a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</article>

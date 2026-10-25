@@ -1,0 +1,12 @@
+{% assign featured_talks = site.data.talks | where: 'featured', true %}
+{% if featured_talks.size > 0 %}
+<section class="selected-talks" aria-labelledby="selected-talks-heading">
+  <h2 id="selected-talks-heading">selected talks</h2>
+  <div class="talks">
+    {% for talk in featured_talks %}
+      {% include talk_row.html talk=talk heading_level=3 %}
+    {% endfor %}
+  </div>
+  <p><a class="talks-all-link" href="{{ '/research/#talks' | relative_url }}">All talks <span aria-hidden="true">→</span></a></p>
+</section>
+{% endif %}

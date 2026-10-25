@@ -48,6 +48,11 @@ layout: default
     {%- include news.html limit=true %}
     {%- endif %}
 
+    <!-- Selected talks -->
+    {% if page.selected_talks -%}
+    {%- include selected_talks.html %}
+    {%- endif %}
+
     <!-- Latest posts -->
     {% if page.latest_posts -%}
     <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>

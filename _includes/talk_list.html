@@ -1,0 +1,16 @@
+<ul class="talk-list">
+  {% for talk in include.talks %}
+    <li>
+      <strong>{% if talk.date %}<time datetime="{{ talk.date | date: '%Y-%m-%d' }}">{{ talk.date | date: '%B %-d, %Y' }}</time>{% else %}{{ talk.year }}{% endif %} — {% if talk.venue_url %}<a href="{{ talk.venue_url | escape }}">{{ talk.venue | escape }}</a>{% else %}{{ talk.venue | escape }}{% endif %}</strong>.
+      {% if talk.slides_url %}<a href="{{ talk.slides_url | escape }}">{{ talk.title | escape }}</a>.{% else %}“{{ talk.title | escape }}.”{% endif %}
+      {% if talk.context %} {{ talk.context | escape }}.{% endif %}
+      {% if talk.slides_url %} · <a href="{{ talk.slides_url | escape }}">Slides</a>{% endif %}
+      {% if talk.abstract_url %} · <a href="{{ talk.abstract_url | escape }}">Abstract</a>{% endif %}
+      {% if talk.pdf_url %}
+        {% assign pdf_url = talk.pdf_url %}
+        {% unless pdf_url contains '://' %}{% assign pdf_url = pdf_url | relative_url %}{% endunless %}
+        · <a href="{{ pdf_url | escape }}">Slides (PDF)</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
