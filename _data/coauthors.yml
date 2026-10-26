@@ -15,17 +15,69 @@
     url: https://yuhaoliu.com/#home
 
 "Lamer":
-  - firstname: ["Katia"]
+  - firstname: ["Katia", "K."]
     url: https://katialamer.weebly.com/
 
 "Batenkov":
-  - firstname: ["Dmitry"]
+  - firstname: ["Dmitry", "D."]
     url: https://dimabatenkov.info/
 
 "Levine":
-  - firstname: ["Matthew E.", "Matthew"]
+  - firstname: ["Matthew E.", "Matthew", "M.", "M. E."]
     url: https://mattlevine.netlify.app/
 
 "Marzouk":
   - firstname: ["Youssef"]
     url: https://aeroastro.mit.edu/people/youssef-m-marzouk/
+
+"Urbaniak":
+  - firstname: ["Rafal", "Rafał", "R."]
+    url: https://rfl-urbaniak.github.io/
+
+"Garg":
+  - firstname: ["Poorva", "P."]
+    url: https://web.cs.ucla.edu/~poorvagarg/
+
+"Vaidyanathan":
+  - firstname: ["Sankaran", "S."]
+    url: https://sankaranv.com/
+
+"Snow":
+  - firstname: ["Luke", "L."]
+    url: https://www.basis.ai/about/people/luke-snow/
+
+"Heinonen":
+  - firstname: ["Markus", "M."]
+    url: https://markusheinonen.github.io/
+
+"Baptista":
+  - firstname: ["Ricardo", "R."]
+    url: https://www.ricardobaptista.com/
+
+"Naim":
+  - firstname: ["Michelangelo", "M."]
+    url: https://naiimic.github.io/
+
+"Urteaga":
+  - firstname: ["Iñigo", "Inigo", "I."]
+    url: https://iurteaga.github.io/
+
+"Feser":
+  - firstname: ["John", "John K.", "Jack", "J."]
+    url: https://people.csail.mit.edu/feser/
+
+"Mackevicius":
+  - firstname: ["Emily L.", "Emily", "E.", "E. L."]
+    url: https://emackev.github.io/
+
+"Cooijmans":
+  - firstname: ["Tim", "T."]
+    url: https://cooijmanstim.github.io/
+
+"Sergeev":
+  - firstname: ["Fedor", "F."]
+    url: https://www.basis.ai/about/people/fedor-sergeev/
+
+"Arora":
+  - firstname: ["Anushri", "A."]
+    url: https://www.basis.ai/about/people/anushri-arora/
