@@ -66,17 +66,3 @@ My main research interests include:
 
 {% assign earlier_contributed_talks = site.data.talks | where: 'section', 'archive' | where: 'kind', 'contributed' %}
 {% include talk_list.html talks=earlier_contributed_talks %}
-
-## recognition
-
-- **2026 — Best Poster Award**, Bayesian Young Statisticians Meeting (BAYSM).
-- **2026 — Position Track Gold Reviewer**, ICML.
-- **2025 — Top Reviewer**, NeurIPS.
-
-## service
-
-### organizing
-
-- **2026 — Asilomar Conference on Signals, Systems, and Computers**: special session on “Bayesian Learning and Inference on Graphs,” co-organized with Kurt Butler, Victor Elvira, and Petar M. Djurić.
-- **2026 — SIAM Uncertainty Quantification**: minisymposium on “Sequential Inference for Dynamical Systems,” co-organized with Fernando Llorente-Fernandez.
-- **2025 — Asilomar Conference on Signals, Systems, and Computers**: special session on “Advances in Causal Inference: Theory and Applications,” co-organized with Petar M. Djurić.
