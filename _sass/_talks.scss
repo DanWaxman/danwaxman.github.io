@@ -9,7 +9,7 @@
 
 .talk-row {
   display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
   margin: 1.5rem 0 2rem;
@@ -20,12 +20,19 @@
 
   .talk-thumbnail {
     display: block;
+    width: 160px;
+    height: 110px;
+
+    picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
 
     img {
       display: block;
       width: 100%;
-      height: auto;
-      aspect-ratio: 800 / 583;
+      height: 100%;
       object-fit: contain;
       background: white;
       border: 1px solid var(--global-divider-color);
@@ -87,12 +94,20 @@
 
 @media (max-width: 575.98px) {
   .talk-row {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 100px minmax(0, 1fr);
     gap: 0.75rem;
 
     .talk-thumbnail {
-      width: 100%;
-      max-width: 320px;
+      width: 100px;
+      height: 76px;
+    }
+
+    .talk-title {
+      font-size: 1rem;
+    }
+
+    &--text-only {
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 }

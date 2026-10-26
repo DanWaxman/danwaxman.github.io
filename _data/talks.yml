@@ -34,8 +34,11 @@
   date: '2026-09-29'
   section: recent
   slides_url: https://danwaxman.github.io/talks/dartmouth_cam_f26/
-  thumbnail: /assets/img/talks/dartmouth_cam_f26.webp
-  thumbnail_alt: Slide illustrating filtering, smoothing, forecasting, and parameter inference for an Ornstein–Uhlenbeck process.
+  thumbnail: /assets/img/talks/dartmouth-lorenz.webp
+  thumbnail_width: 540
+  thumbnail_height: 540
+  thumbnail_alt: Lorenz attractor trajectory with a moving point tracing the dynamics.
+  thumbnail_animation: /assets/img/talks/dartmouth-lorenz-animated.webp
   featured: true
 
 - id: mit-cse-2026
@@ -45,8 +48,11 @@
   date: '2026-09-18'
   section: recent
   slides_url: https://danwaxman.github.io/talks/mit_cse_f26/
-  thumbnail: /assets/img/talks/mit_cse_f26.webp
-  thumbnail_alt: Slide connecting discrete-time state transitions and continuous-time drift and diffusion in state space models.
+  thumbnail: /assets/img/talks/mit-cse-flocking.webp
+  thumbnail_width: 540
+  thumbnail_height: 540
+  thumbnail_alt: Animated flocking simulation showing interacting agents moving together.
+  thumbnail_animation: /assets/img/talks/mit-cse-flocking-animated.webp
   featured: false
 
 - id: siam-ne-2026
@@ -56,8 +62,11 @@
   section: recent
   context: 'Minisymposium on “Generative Scientific Machine Learning for PDEs and Complex Physical Systems”'
   slides_url: https://danwaxman.github.io/talks/siam_ne_26/
-  thumbnail: /assets/img/talks/siam_ne_26.webp
-  thumbnail_alt: Slide introducing a hybrid model that combines known and unknown components of stochastic dynamics.
+  thumbnail: /assets/img/talks/siam-ne-reaction-diffusion.webp
+  thumbnail_width: 1000
+  thumbnail_height: 347
+  thumbnail_alt: Reaction–diffusion forecast comparing the evolving spatial fields in three panels.
+  thumbnail_animation: /assets/img/talks/siam-ne-reaction-diffusion-animated.webp
   featured: true
 
 - id: isba-2026
@@ -68,8 +77,10 @@
   context: 'Session on “Calibrated Bayes: Model Design and Adaptation Under Limited Resources”'
   slides_url: https://danwaxman.github.io/talks/isba_wm_26/
   pdf_url: https://danwaxman.github.io/talks/isba_wm_26/ISBA_slides.pdf
-  thumbnail: /assets/img/talks/isba_wm_26.webp
-  thumbnail_alt: Diagram of three candidate models evolving over four time steps and combining into predictive ensembles.
+  thumbnail: /assets/img/talks/isba-predictive-performance.webp
+  thumbnail_width: 992
+  thumbnail_height: 635
+  thumbnail_alt: Predictive log-likelihood over time comparing online model fusion methods.
   featured: true
 
 - id: siam-uq-2026
@@ -79,8 +90,11 @@
   section: recent
   context: 'Minisymposium on “Sequential Inference for Dynamical Systems”'
   slides_url: https://danwaxman.github.io/talks/siam_uq_26/
-  thumbnail: /assets/img/talks/siam_uq_26.webp
-  thumbnail_alt: Two-panel comparison of standard and robust Gaussian process predictions in the presence of outliers.
+  thumbnail: /assets/img/talks/siam-uq-adaptive-gp.webp
+  thumbnail_width: 1000
+  thumbnail_height: 406
+  thumbnail_alt: Adaptive Gaussian process predictions evolving as new observations arrive.
+  thumbnail_animation: /assets/img/talks/siam-uq-adaptive-gp-animated.webp
   featured: false
 
 - id: queens-2026
@@ -89,8 +103,10 @@
   date: '2026-02-09'
   section: recent
   slides_url: https://danwaxman.github.io/talks/q4c_feb_26/
-  thumbnail: /assets/img/talks/q4c_feb_26.webp
-  thumbnail_alt: Slide motivating online Gaussian process ensembles over different hyperparameters.
+  thumbnail: /assets/img/talks/queens-dynamic-gp-features.webp
+  thumbnail_width: 1000
+  thumbnail_height: 569
+  thumbnail_alt: Dynamic Gaussian process predictions and their feature-space projections at four times.
   featured: false
 
 - id: siam-section-2024

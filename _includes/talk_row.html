@@ -7,7 +7,13 @@
 <article class="talk-row{% unless talk.thumbnail and talk_link %} talk-row--text-only{% endunless %}" aria-labelledby="talk-{{ talk.id }}">
   {% if talk.thumbnail and talk_link %}
     <a class="talk-thumbnail" href="{{ talk_link | escape }}" aria-label="Slides for {{ talk.title | escape }} at {{ talk.venue | escape }}">
-      <img src="{{ talk.thumbnail | relative_url }}" width="800" height="583" loading="lazy" decoding="async" alt="{{ talk.thumbnail_alt | escape }}">
+      <picture>
+        {% if talk.thumbnail_animation %}
+          <source media="(prefers-reduced-motion: reduce)" srcset="{{ talk.thumbnail | relative_url }}">
+          <source srcset="{{ talk.thumbnail_animation | relative_url }}" type="image/webp">
+        {% endif %}
+        <img src="{{ talk.thumbnail | relative_url }}" width="{{ talk.thumbnail_width }}" height="{{ talk.thumbnail_height }}" loading="lazy" decoding="async" alt="{{ talk.thumbnail_alt | escape }}">
+      </picture>
     </a>
   {% endif %}
   <div class="talk-details">
