@@ -34,6 +34,11 @@
   date: '2026-11-03'
   section: recent
   slides_url: https://danwaxman.github.io/talks/mit_physmath_f26/
+  thumbnail: /assets/img/talks/dartmouth-lorenz.webp
+  thumbnail_width: 540
+  thumbnail_height: 540
+  thumbnail_alt: Lorenz attractor trajectory with a moving point tracing the dynamics.
+  thumbnail_animation: /assets/img/talks/dartmouth-lorenz-animated.webp
 
 - id: asilomar-2026
   title: Bayesian Learning of Graph-Based Interaction Potentials with Applications to Studying Animal Behavior
@@ -63,11 +68,11 @@
   date: '2026-09-18'
   section: recent
   slides_url: https://danwaxman.github.io/talks/mit_cse_f26/
-  thumbnail: /assets/img/talks/mit-cse-flocking.webp
+  thumbnail: /assets/img/talks/dartmouth-lorenz.webp
   thumbnail_width: 540
   thumbnail_height: 540
-  thumbnail_alt: Animated flocking simulation showing interacting agents moving together.
-  thumbnail_animation: /assets/img/talks/mit-cse-flocking-animated.webp
+  thumbnail_alt: Lorenz attractor trajectory with a moving point tracing the dynamics.
+  thumbnail_animation: /assets/img/talks/dartmouth-lorenz-animated.webp
   featured: false
 
 - id: siam-ne-2026
