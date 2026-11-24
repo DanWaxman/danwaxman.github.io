@@ -13,20 +13,6 @@
   section: upcoming
   context: 'Minisymposium on “Beyond Standard Bayesian Paradigms for Reliable Uncertainty Quantification”'
 
-- id: mit-physical-mathematics-2026
-  title: 'dynestyx: A Probabilistic Programming Language for Dynamical Systems'
-  venue: MIT Physical Mathematics Seminar
-  venue_url: https://math.mit.edu/pms/
-  date: '2026-11-03'
-  section: upcoming
-
-- id: asilomar-2026
-  title: Bayesian Learning of Graph-Based Interaction Potentials with Applications to Studying Animal Behavior
-  venue: Asilomar Conference on Signals, Systems, and Computers
-  date: '2026-10-27'
-  section: upcoming
-  slides_url: https://danwaxman.github.io/talks/asilomar_f26/
-
 - id: mlds-2026
   title: 'dynestyx: A Probabilistic Programming Library for Dynamical Systems'
   venue: MLDS Seminar
@@ -40,6 +26,20 @@
   thumbnail_alt: Lorenz attractor trajectory with a moving point tracing the dynamics.
   thumbnail_animation: /assets/img/talks/dartmouth-lorenz-animated.webp
   featured: true
+
+- id: mit-physical-mathematics-2026
+  title: 'dynestyx: A Probabilistic Programming Language for Dynamical Systems'
+  venue: MIT Physical Mathematics Seminar
+  venue_url: https://math.mit.edu/pms/
+  date: '2026-11-03'
+  section: recent
+
+- id: asilomar-2026
+  title: Bayesian Learning of Graph-Based Interaction Potentials with Applications to Studying Animal Behavior
+  venue: Asilomar Conference on Signals, Systems, and Computers
+  date: '2026-10-27'
+  section: recent
+  slides_url: https://danwaxman.github.io/talks/asilomar_f26/
 
 - id: dartmouth-2026
   title: 'dynestyx: A Probabilistic Programming Library for Dynamical Systems'
