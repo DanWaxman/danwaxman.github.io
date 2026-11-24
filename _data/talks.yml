@@ -27,6 +27,20 @@
   section: upcoming
   slides_url: https://danwaxman.github.io/talks/asilomar_f26/
 
+- id: mlds-2026
+  title: 'dynestyx: A Probabilistic Programming Library for Dynamical Systems'
+  venue: MLDS Seminar
+  date: '2026-11-05'
+  section: recent
+  slides_url: https://danwaxman.github.io/talks/mlds_f26/
+  video_url: https://www.youtube.com/watch?v=TCQdpcyoiOE
+  thumbnail: /assets/img/talks/dartmouth-lorenz.webp
+  thumbnail_width: 540
+  thumbnail_height: 540
+  thumbnail_alt: Lorenz attractor trajectory with a moving point tracing the dynamics.
+  thumbnail_animation: /assets/img/talks/dartmouth-lorenz-animated.webp
+  featured: true
+
 - id: dartmouth-2026
   title: 'dynestyx: A Probabilistic Programming Library for Dynamical Systems'
   venue: Dartmouth Computational and Applied Mathematics Seminar
@@ -39,7 +53,7 @@
   thumbnail_height: 540
   thumbnail_alt: Lorenz attractor trajectory with a moving point tracing the dynamics.
   thumbnail_animation: /assets/img/talks/dartmouth-lorenz-animated.webp
-  featured: true
+  featured: false
 
 - id: mit-cse-2026
   title: 'dynestyx: A Probabilistic Programming Library for Dynamical Systems'

@@ -26,9 +26,10 @@
       {% if talk.venue_url %}<a href="{{ talk.venue_url | escape }}">{{ talk.venue | escape }}</a>{% else %}{{ talk.venue | escape }}{% endif %}
     </p>
     {% if talk.context and include.show_context %}<p class="talk-context">{{ talk.context | escape }}</p>{% endif %}
-    {% if talk.slides_url or talk.pdf_url %}
+    {% if talk.slides_url or talk.pdf_url or talk.video_url %}
       <div class="talk-resources">
         {% if talk.slides_url %}<a class="btn btn-sm" href="{{ talk.slides_url | escape }}">Slides<span class="sr-only"> for {{ talk.title | escape }} at {{ talk.venue | escape }}</span></a>{% endif %}
+        {% if talk.video_url %}<a class="btn btn-sm" href="{{ talk.video_url | escape }}">Video<span class="sr-only"> for {{ talk.title | escape }} at {{ talk.venue | escape }}</span></a>{% endif %}
         {% if talk.pdf_url %}
           {% assign pdf_url = talk.pdf_url %}
           {% unless pdf_url contains '://' %}{% assign pdf_url = pdf_url | relative_url %}{% endunless %}

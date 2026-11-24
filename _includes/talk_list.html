@@ -5,6 +5,7 @@
       {% if talk.slides_url %}<a href="{{ talk.slides_url | escape }}">{{ talk.title | escape }}</a>.{% else %}“{{ talk.title | escape }}.”{% endif %}
       {% if talk.context %} {{ talk.context | escape }}.{% endif %}
       {% if talk.slides_url %} · <a href="{{ talk.slides_url | escape }}">Slides</a>{% endif %}
+      {% if talk.video_url %} · <a href="{{ talk.video_url | escape }}">Video</a>{% endif %}
       {% if talk.abstract_url %} · <a href="{{ talk.abstract_url | escape }}">Abstract</a>{% endif %}
       {% if talk.pdf_url %}
         {% assign pdf_url = talk.pdf_url %}
