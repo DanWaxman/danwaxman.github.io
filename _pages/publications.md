@@ -7,11 +7,9 @@ nav: true
 nav_order: 1
 ---
 
-My main research interests include:
+I’m interested in Bayesian statistics and machine learning, especially Gaussian processes, dynamical systems, and ensemble methods. I’ve also worked on causal inference, including applications to dynamical systems and mechanistic interpretability.
 
-- Bayesian learning — particularly in dynamical systems or online settings
-- Causal inference — particularly causal structure learning and problems with confounders
-- Fusion and ensembling methods — particularly of Bayesian models
+My current research focuses on Bayesian statistics for dynamical systems across the entire stack of study: methodology, probabilistic programming, theory, and application. At the moment, I'm particularly interested in methodology for system identification, theory of predictively-oriented inference in sequential settings, and the application of Bayesian workflow to dynamical systems.
 
 ## publications
 
