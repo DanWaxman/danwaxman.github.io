@@ -33,6 +33,7 @@
   venue_url: https://math.mit.edu/pms/
   date: '2026-11-03'
   section: recent
+  slides_url: https://danwaxman.github.io/talks/mit_physmath_f26/
 
 - id: asilomar-2026
   title: Bayesian Learning of Graph-Based Interaction Potentials with Applications to Studying Animal Behavior
